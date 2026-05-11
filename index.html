@@ -4,8 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Privacy Policy — Resipoc</title>
-<meta name="description" content="Privacy policy for the Resipoc mobile reference app. Resipoc collects no personal information.">
-<link rel="canonical" href="https://maytham-altaan.github.io/resipoc-privacy/">
+<meta name="description" content="Privacy policy for the Resipoc mobile reference app. Resipoc requires a free account and collects only what is needed to maintain it.">
 <style>
   :root {
     --bg: #ffffff; --fg: #1a1f29; --muted: #5a6473;
@@ -22,6 +21,7 @@
   header { border-bottom: 1px solid var(--border); margin-bottom: 32px; padding-bottom: 16px; }
   h1 { color: var(--accent); margin: 0 0 4px; font-size: 28px; letter-spacing: -0.5px; }
   h2 { font-size: 18px; margin-top: 32px; color: var(--fg); }
+  h3 { font-size: 15px; margin-top: 20px; color: var(--fg); }
   .meta { color: var(--muted); font-size: 13px; }
   table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
   th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
@@ -29,6 +29,7 @@
   ul { padding-left: 22px; }
   li { margin: 4px 0; }
   code { background: var(--code); padding: 1px 6px; border-radius: 4px; font-size: 90%; }
+  a { color: var(--accent); }
   footer { margin-top: 48px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 16px; }
 </style>
 </head>
@@ -36,79 +37,165 @@
 <main>
 <header>
   <h1>Privacy Policy — Resipoc</h1>
-  <p class="meta">Effective 2026-05-10 · Last updated 2026-05-10</p>
+  <p class="meta">Effective 2026-05-11 · Last updated 2026-05-11</p>
 </header>
 
-<p>This Privacy Policy describes how the Resipoc mobile application (&ldquo;Resipoc,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;the app&rdquo;) handles information about you (&ldquo;you&rdquo; or &ldquo;the user&rdquo;). By installing or using Resipoc you agree to the practices described below. If you do not agree, do not install or use the app.</p>
+<p>This Privacy Policy describes how the Resipoc mobile application (&ldquo;Resipoc,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;the app&rdquo;) handles information about you (&ldquo;you&rdquo; or &ldquo;the user&rdquo;). By installing, creating an account, or using Resipoc you agree to the practices described below. If you do not agree, do not install or use the app.</p>
 
 <h2>1. Who we are</h2>
 <p>Resipoc is an educational reference application for licensed healthcare professionals and trainees. It is published by an individual developer (&ldquo;the developer&rdquo;). Resipoc is <strong>not a medical device</strong>, does not provide medical advice, and is not intended to diagnose, treat, cure, or prevent any disease.</p>
 
 <h2>2. Summary</h2>
 <ul>
-  <li>Resipoc <strong>does not require an account</strong>.</li>
-  <li>Resipoc <strong>does not collect, store, or transmit any personal information</strong> to the developer or to any third party.</li>
-  <li>Resipoc <strong>does not contain advertising, third-party trackers, analytics SDKs, or social-media SDKs</strong>.</li>
-  <li>All app data (the reference content and your acceptance of the disclaimer) is stored <strong>only on your device</strong>.</li>
-  <li>Resipoc <strong>does not access</strong> your camera, microphone, location, contacts, photos, calendar, or health data.</li>
+  <li>Resipoc <strong>requires a free account</strong> to use, created with an email address (with email verification), Apple Sign-In, or Google Sign-In.</li>
+  <li>We collect only what is required to maintain that account: your email address, a unique account identifier, and (if you choose to share it via Apple or Google) your name.</li>
+  <li>We <strong>do not</strong> sell, rent, share, or transfer any user data to third parties for advertising, marketing, or any other purpose unrelated to running your account.</li>
+  <li>We <strong>do not</strong> contain advertising, analytics SDKs, tracking pixels, attribution SDKs, or social-media SDKs.</li>
+  <li>The reference content and your in-app preferences are stored <strong>only on your device</strong>.</li>
+  <li>You can <strong>delete your account at any time</strong> from the About screen inside the app, which permanently removes your account record.</li>
 </ul>
 
-<h2>3. Information stored on your device</h2>
-<p>The app stores the following information <strong>locally on your device only</strong>, using the operating system&rsquo;s standard secure on-device storage:</p>
+<h2>3. Information we collect</h2>
+
+<h3>3.1 Account information (required)</h3>
+<p>To create and maintain your Resipoc account, we collect:</p>
 <table>
   <thead>
-    <tr><th>Item</th><th>Purpose</th><th>Where it lives</th></tr>
+    <tr><th>Item</th><th>Source</th><th>Purpose</th></tr>
   </thead>
   <tbody>
     <tr>
-      <td>Disclaimer acceptance flag, version, and timestamp</td>
-      <td>To remember that you have acknowledged the in-app disclaimer so we do not prompt you on every launch</td>
-      <td>On-device key-value storage (iOS Keychain-backed AsyncStorage / Android EncryptedSharedPreferences)</td>
+      <td>Email address</td>
+      <td>You provide it on sign-up, or it is supplied by Apple / Google when you use their sign-in flow</td>
+      <td>Account identification, password reset, email verification, security notifications</td>
+    </tr>
+    <tr>
+      <td>Account identifier (Firebase UID)</td>
+      <td>Generated by Firebase Authentication when your account is created</td>
+      <td>Internal account identifier; never shown to other users</td>
+    </tr>
+    <tr>
+      <td>Auth-provider identifier</td>
+      <td>Apple ID subject identifier or Google account ID, depending on sign-in method</td>
+      <td>To recognize you on future sign-ins via that provider</td>
+    </tr>
+    <tr>
+      <td>Display name (optional)</td>
+      <td>You may share a name when signing in with Apple or Google; we do not require it</td>
+      <td>Display in the About screen so you can confirm which account you are signed into</td>
     </tr>
   </tbody>
 </table>
-<p>This information <strong>never leaves your device</strong>. It is not transmitted to the developer, to Apple, to Google, or to any third party. You can erase it at any time by tapping <strong>Revoke acceptance</strong> on the About screen, or by uninstalling the app.</p>
+<p>If you sign in with <strong>Sign in with Apple</strong>, Apple allows you to share an anonymized relay email instead of your real email. Resipoc supports this &mdash; we never see your real email if you choose this option.</p>
 
-<h2>4. Information we do NOT collect</h2>
+<h3>3.2 On-device data</h3>
+<p>The following information is stored <strong>locally on your device only</strong> and never sent to us:</p>
+<table>
+  <thead>
+    <tr><th>Item</th><th>Purpose</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>In-app disclaimer acceptance flag, version, and timestamp</td>
+      <td>So we do not prompt you on every launch</td>
+    </tr>
+    <tr>
+      <td>Authentication session token</td>
+      <td>So you do not need to sign in on every launch (managed by Firebase Authentication&rsquo;s secure on-device storage; iOS Keychain / Android EncryptedSharedPreferences)</td>
+    </tr>
+    <tr>
+      <td>Future per-user preferences (e.g. favorites, dark mode)</td>
+      <td>When such features are added, they will also be stored locally unless this policy is updated</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>3.3 What we explicitly do NOT collect</h3>
 <p>To be explicit, Resipoc does not collect:</p>
 <ul>
-  <li>Your name, email, phone number, address, date of birth, or any other identifier</li>
   <li>Patient information of any kind</li>
-  <li>Search queries, viewed pages, or any usage analytics</li>
-  <li>Crash reports or diagnostics (no Sentry, Firebase, Crashlytics, or similar)</li>
-  <li>Device identifiers (IDFA, AAID, IMEI, MAC address, etc.)</li>
-  <li>IP address, GPS, or any location signal</li>
-  <li>Photos, contacts, calendar entries, or any other on-device content</li>
+  <li>Search queries or in-app navigation telemetry</li>
+  <li>Usage analytics or product-analytics events (no Mixpanel, Amplitude, PostHog, Segment, or similar)</li>
+  <li>Crash reports or diagnostic logs (no Sentry, Firebase Crashlytics, or similar)</li>
+  <li>Advertising identifiers (IDFA, AAID), nor MAC, IMEI, or other device hardware IDs</li>
+  <li>Your precise or approximate location (GPS, IP-derived, or otherwise)</li>
+  <li>Photos, microphone, calendar, contacts, or any other on-device content</li>
   <li>Health, fitness, or biometric data &mdash; Resipoc does not integrate with Apple Health or Google Health Connect</li>
+  <li>Payment or financial information &mdash; Resipoc is free, with no in-app purchases</li>
 </ul>
 
-<h2>5. Third-party services</h2>
-<p>Resipoc does not integrate any third-party SDK that collects personal data. The only outbound network requests Resipoc may make are:</p>
+<h2>4. Third-party services we use</h2>
+<p>To run authentication, Resipoc uses <strong>Firebase Authentication</strong>, operated by Google. Firebase processes your email address, password (in hashed form only), authentication tokens, and IP-address request metadata strictly for the purpose of running the sign-in / verification / password-reset flow. Firebase acts as a data processor on the developer&rsquo;s behalf. Google&rsquo;s privacy practices for Firebase are described in the <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a> documentation and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<p>If you choose <strong>Sign in with Google</strong>, your interaction with Google&rsquo;s OAuth flow is governed by Google&rsquo;s own privacy policy. Resipoc only receives the basic profile information (account ID, email, name) you consent to share at sign-in.</p>
+<p>If you choose <strong>Sign in with Apple</strong>, your interaction with Apple&rsquo;s OAuth flow is governed by Apple&rsquo;s privacy policy. Resipoc only receives the basic information Apple shares with us (identifier token, and email/name if you choose to share them).</p>
+<p>Resipoc does <strong>not</strong> integrate any analytics, advertising, attribution, or social SDK. The only outbound network traffic the app makes is:</p>
 <ul>
-  <li>Loading the app&rsquo;s own bundled content updates from the Expo / EAS Update service operated on the developer&rsquo;s behalf for the sole purpose of delivering app updates. These requests do not transmit personal information; they may include standard request metadata (such as your IP address and device platform) handled by the update infrastructure under its own privacy terms.</li>
+  <li>Authentication requests to Firebase Authentication endpoints (under <code>*.firebaseapp.com</code> and <code>*.googleapis.com</code>).</li>
+  <li>Optional app updates served by the Expo Application Services Update infrastructure (under <code>*.expo.dev</code>), which never receives personal information.</li>
 </ul>
-<p>If this changes (e.g., we add an opt-in feedback channel), this policy will be updated and you will be notified through an in-app prompt before any new data is collected.</p>
 
-<h2>6. Children&rsquo;s privacy</h2>
-<p>Resipoc is intended for healthcare professionals and trainees, who are presumed to be at least 17 years of age. Resipoc is not directed at children under 13. We do not knowingly collect any information from children.</p>
-
-<h2>7. Security</h2>
-<p>Because Resipoc does not collect personal data, there is no personal data we hold to lose. The disclaimer-acceptance record stored locally is protected by your device&rsquo;s standard application sandbox.</p>
-
-<h2>8. Your rights</h2>
+<h2>5. How we use your information</h2>
+<p>We use the information we collect only to:</p>
 <ul>
-  <li><strong>Stop using the app</strong> at any time by uninstalling it.</li>
-  <li><strong>Delete the on-device disclaimer record</strong> at any time via <em>About &rarr; Revoke acceptance</em> or by uninstalling the app.</li>
+  <li>Create, authenticate, and maintain your Resipoc account.</li>
+  <li>Send transactional emails: email verification, password reset, account deletion confirmation.</li>
+  <li>Communicate security or policy notices specific to your account when required.</li>
+  <li>Diagnose account-level bugs or fraud you report to us.</li>
 </ul>
-<p>Because we hold no data about you, there is no data for us to access, correct, export, or delete on our servers &mdash; there are no servers. If you are in a jurisdiction with privacy laws such as the EU/UK GDPR, the California Consumer Privacy Act (CCPA/CPRA), Brazil&rsquo;s LGPD, or similar, you have the rights granted by those laws. As described above, we do not act as a controller or processor of personal data, because we do not collect any.</p>
+<p>We do <strong>not</strong> use your information to:</p>
+<ul>
+  <li>Advertise to you or to third parties.</li>
+  <li>Track you across other apps or websites.</li>
+  <li>Build a profile for advertising, segmentation, or analytics purposes.</li>
+  <li>Sell or trade your information.</li>
+</ul>
 
-<h2>9. Disclaimer</h2>
-<p>Resipoc is an educational reference. It is <strong>not a medical device</strong>, <strong>not a diagnostic tool</strong>, and <strong>not a substitute for clinical judgment</strong>. Always verify antimicrobial information against your institution&rsquo;s antibiogram and the current edition of CLSI M100 or the EUCAST clinical breakpoint tables before applying it to patient care. The developer accepts no liability for clinical decisions made based on the contents of this app. Use of Resipoc is governed by the in-app acceptance terms shown on first launch.</p>
+<h2>6. Sharing your information</h2>
+<p>We do not sell, rent, share, or transfer any personal data to third parties for advertising or marketing.</p>
+<p>We may share information only in the following narrow cases:</p>
+<ul>
+  <li><strong>Service providers</strong> &mdash; Firebase Authentication (Google), which processes the data described in Section 4 strictly on our instructions, for the sole purpose of running authentication.</li>
+  <li><strong>Legal obligations</strong> &mdash; if compelled by a valid subpoena, court order, or similar lawful process from a jurisdiction where we operate.</li>
+  <li><strong>Protection of safety</strong> &mdash; to prevent imminent harm or fraud, in narrowly tailored circumstances.</li>
+</ul>
+<p>If the developer is ever acquired, you will be notified before any change of data controller takes effect, and you will have the opportunity to delete your account before the transfer.</p>
 
-<h2>10. Changes to this policy</h2>
-<p>If this policy changes, the updated text will be published at the same URL and the <em>Last updated</em> date above will reflect the change. Material changes will also be surfaced in-app on the next launch.</p>
+<h2>7. International data transfers</h2>
+<p>Firebase Authentication processes data in Google data centers located in the United States and other regions. By creating a Resipoc account you consent to this processing.</p>
 
-<h2>11. Contact</h2>
+<h2>8. Children&rsquo;s privacy</h2>
+<p>Resipoc is intended for healthcare professionals and trainees, presumed to be at least 17 years of age. The app is not directed at children under 13 and we do not knowingly collect any information from children.</p>
+
+<h2>9. Security</h2>
+<ul>
+  <li>All network traffic between the app and Firebase Authentication is encrypted in transit using TLS.</li>
+  <li>Passwords are never sent to the developer in plain text; Firebase Authentication stores only a one-way hash.</li>
+  <li>The on-device session token is protected by the operating system&rsquo;s secure storage (iOS Keychain / Android EncryptedSharedPreferences).</li>
+  <li>No personal data is stored on the developer&rsquo;s servers &mdash; there are no servers operated by the developer.</li>
+</ul>
+
+<h2>10. Your rights</h2>
+<p>Regardless of where you live, you can:</p>
+<ul>
+  <li><strong>View your account details</strong> at any time in the About screen inside the app.</li>
+  <li><strong>Change your password</strong> via the &ldquo;Forgot password&rdquo; flow on the sign-in screen.</li>
+  <li><strong>Sign out</strong> of your account at any time in the About screen.</li>
+  <li><strong>Permanently delete your account</strong> in the About screen &rarr; <em>Delete account</em>. This removes your Firebase Authentication record. Account deletion is immediate and irreversible.</li>
+</ul>
+<p>If you are in the EU/UK and the GDPR applies, you have the additional rights granted by it (access, rectification, erasure, restriction, portability, and objection). Because the data we hold is minimal &mdash; your email, account ID, and optional name &mdash; you can effectively exercise these rights with the in-app <em>Delete account</em> function or by emailing the developer at the address listed on the App Store and Google Play listings.</p>
+<p>If you are in California and the CCPA/CPRA applies, you have similar rights, and we do not &ldquo;sell&rdquo; or &ldquo;share&rdquo; your personal information as those terms are defined under California law.</p>
+
+<h2>11. Data retention</h2>
+<ul>
+  <li>Account data is retained for as long as your account exists.</li>
+  <li>When you delete your account, your Firebase Authentication record is removed immediately.</li>
+  <li>Transactional emails (verification, password reset) are not stored by the developer; Firebase may retain delivery logs for a limited period for fraud-prevention purposes.</li>
+</ul>
+
+<h2>12. Changes to this policy</h2>
+<p>If this policy changes, the updated text will be published at the same URL and the <em>Last updated</em> date above will reflect the change. Material changes will also be surfaced in-app on the next launch and you may be asked to re-acknowledge the disclaimer.</p>
+
+<h2>13. Contact</h2>
 <p>For privacy questions, contact the developer at the email address listed on the App Store and Google Play listings for Resipoc.</p>
 
 <footer>&copy; 2026 Resipoc &mdash; Privacy Policy</footer>
