@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — Resipoc</title>
+<meta name="description" content="Privacy policy for the Resipoc mobile reference app. Resipoc collects no personal information.">
+<link rel="canonical" href="">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1a1f29; --muted: #5a6473;
+    --accent: #0b6e4f; --border: #e3e6eb; --code: #f7f8fa;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+    padding: 32px 20px 64px;
+  }
+  main { max-width: 760px; margin: 0 auto; }
+  header { border-bottom: 1px solid var(--border); margin-bottom: 32px; padding-bottom: 16px; }
+  h1 { color: var(--accent); margin: 0 0 4px; font-size: 28px; letter-spacing: -0.5px; }
+  h2 { font-size: 18px; margin-top: 32px; color: var(--fg); }
+  .meta { color: var(--muted); font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: var(--code); font-weight: 600; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  code { background: var(--code); padding: 1px 6px; border-radius: 4px; font-size: 90%; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Privacy Policy — Resipoc</h1>
+  <p class="meta">Effective 2026-05-10 · Last updated 2026-05-10</p>
+</header>
+
+<p>This Privacy Policy describes how the Resipoc mobile application (&ldquo;Resipoc,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;the app&rdquo;) handles information about you (&ldquo;you&rdquo; or &ldquo;the user&rdquo;). By installing or using Resipoc you agree to the practices described below. If you do not agree, do not install or use the app.</p>
+
+<h2>1. Who we are</h2>
+<p>Resipoc is an educational reference application for licensed healthcare professionals and trainees. It is published by an individual developer (&ldquo;the developer&rdquo;). Resipoc is <strong>not a medical device</strong>, does not provide medical advice, and is not intended to diagnose, treat, cure, or prevent any disease.</p>
+
+<h2>2. Summary</h2>
+<ul>
+  <li>Resipoc <strong>does not require an account</strong>.</li>
+  <li>Resipoc <strong>does not collect, store, or transmit any personal information</strong> to the developer or to any third party.</li>
+  <li>Resipoc <strong>does not contain advertising, third-party trackers, analytics SDKs, or social-media SDKs</strong>.</li>
+  <li>All app data (the reference content and your acceptance of the disclaimer) is stored <strong>only on your device</strong>.</li>
+  <li>Resipoc <strong>does not access</strong> your camera, microphone, location, contacts, photos, calendar, or health data.</li>
+</ul>
+
+<h2>3. Information stored on your device</h2>
+<p>The app stores the following information <strong>locally on your device only</strong>, using the operating system&rsquo;s standard secure on-device storage:</p>
+<table>
+  <thead>
+    <tr><th>Item</th><th>Purpose</th><th>Where it lives</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Disclaimer acceptance flag, version, and timestamp</td>
+      <td>To remember that you have acknowledged the in-app disclaimer so we do not prompt you on every launch</td>
+      <td>On-device key-value storage (iOS Keychain-backed AsyncStorage / Android EncryptedSharedPreferences)</td>
+    </tr>
+  </tbody>
+</table>
+<p>This information <strong>never leaves your device</strong>. It is not transmitted to the developer, to Apple, to Google, or to any third party. You can erase it at any time by tapping <strong>Revoke acceptance</strong> on the About screen, or by uninstalling the app.</p>
+
+<h2>4. Information we do NOT collect</h2>
+<p>To be explicit, Resipoc does not collect:</p>
+<ul>
+  <li>Your name, email, phone number, address, date of birth, or any other identifier</li>
+  <li>Patient information of any kind</li>
+  <li>Search queries, viewed pages, or any usage analytics</li>
+  <li>Crash reports or diagnostics (no Sentry, Firebase, Crashlytics, or similar)</li>
+  <li>Device identifiers (IDFA, AAID, IMEI, MAC address, etc.)</li>
+  <li>IP address, GPS, or any location signal</li>
+  <li>Photos, contacts, calendar entries, or any other on-device content</li>
+  <li>Health, fitness, or biometric data &mdash; Resipoc does not integrate with Apple Health or Google Health Connect</li>
+</ul>
+
+<h2>5. Third-party services</h2>
+<p>Resipoc does not integrate any third-party SDK that collects personal data. The only outbound network requests Resipoc may make are:</p>
+<ul>
+  <li>Loading the app&rsquo;s own bundled content updates from the Expo / EAS Update service operated on the developer&rsquo;s behalf for the sole purpose of delivering app updates. These requests do not transmit personal information; they may include standard request metadata (such as your IP address and device platform) handled by the update infrastructure under its own privacy terms.</li>
+</ul>
+<p>If this changes (e.g., we add an opt-in feedback channel), this policy will be updated and you will be notified through an in-app prompt before any new data is collected.</p>
+
+<h2>6. Children&rsquo;s privacy</h2>
+<p>Resipoc is intended for healthcare professionals and trainees, who are presumed to be at least 17 years of age. Resipoc is not directed at children under 13. We do not knowingly collect any information from children.</p>
+
+<h2>7. Security</h2>
+<p>Because Resipoc does not collect personal data, there is no personal data we hold to lose. The disclaimer-acceptance record stored locally is protected by your device&rsquo;s standard application sandbox.</p>
+
+<h2>8. Your rights</h2>
+<ul>
+  <li><strong>Stop using the app</strong> at any time by uninstalling it.</li>
+  <li><strong>Delete the on-device disclaimer record</strong> at any time via <em>About &rarr; Revoke acceptance</em> or by uninstalling the app.</li>
+</ul>
+<p>Because we hold no data about you, there is no data for us to access, correct, export, or delete on our servers &mdash; there are no servers. If you are in a jurisdiction with privacy laws such as the EU/UK GDPR, the California Consumer Privacy Act (CCPA/CPRA), Brazil&rsquo;s LGPD, or similar, you have the rights granted by those laws. As described above, we do not act as a controller or processor of personal data, because we do not collect any.</p>
+
+<h2>9. Disclaimer</h2>
+<p>Resipoc is an educational reference. It is <strong>not a medical device</strong>, <strong>not a diagnostic tool</strong>, and <strong>not a substitute for clinical judgment</strong>. Always verify antimicrobial information against your institution&rsquo;s antibiogram and the current edition of CLSI M100 or the EUCAST clinical breakpoint tables before applying it to patient care. The developer accepts no liability for clinical decisions made based on the contents of this app. Use of Resipoc is governed by the in-app acceptance terms shown on first launch.</p>
+
+<h2>10. Changes to this policy</h2>
+<p>If this policy changes, the updated text will be published at the same URL and the <em>Last updated</em> date above will reflect the change. Material changes will also be surfaced in-app on the next launch.</p>
+
+<h2>11. Contact</h2>
+<p>For privacy questions, contact the developer at the email address listed on the App Store and Google Play listings for Resipoc.</p>
+
+<footer>&copy; 2026 Resipoc &mdash; Privacy Policy</footer>
+</main>
+</body>
+</html>
